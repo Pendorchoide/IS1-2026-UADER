@@ -292,14 +292,14 @@ flowchart TD
     Z["El cliente debe tener una sesión activa para realizar esta actividad."]
     style Z fill:#ffffff,stroke:#969696,stroke-width:1px,text-align:left, color:black
     
-    A(( )) -->|Consultar tickets existentes| B["Pedir tickets del cliente"]
+    A@{ shape: sm-circ, label: "Small start" } -->|Consultar tickets existentes| B["Pedir tickets del cliente"]
     
     B --> C{"El cliente tiene<br/>tickets asociados"}
    
     C -->|Si| D[/"Informar al cliente sus<br/>tickets asociados<br/>con listarTickets()"/]
     C -->|No| E[/"Informar al usuario que no<br/>tiene tickets asociados"/]
     
-    D --> F(( ))
+    D --> F@{ shape: framed-circle, label: "Stop" }
     E --> F
 
     Z -.- A
@@ -313,7 +313,7 @@ flowchart TD
 
     Z-.-A
 
-    A(( )) -->|Borrar ticket| B["Borrar ticket"]
+    A@{ shape: sm-circ, label: "Small start" }-->|Borrar ticket| B["Borrar ticket"]
     
     B --> C{"¿Es posible<br/>borrar el ticket?"}
     X-.-D
@@ -325,7 +325,7 @@ flowchart TD
     
     D --> E["Genera Log de auditoría."]
     E --> F[/"Informar al cliente sobre el<br/>éxito de la transacción"/]
-    F --> G(( ))
+    F --> G@{ shape: framed-circle, label: "Stop" }
 
     C -->|No| H[/"Informar al usuario sobre<br/>el error en los datos"/]
     H --> I["Preguntar si se desea<br/>intentar de nuevo"]
