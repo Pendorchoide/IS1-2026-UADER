@@ -65,7 +65,7 @@ classDiagram
         +GetId()
         +GetTitulo()
         +GetAutor()
-        +BuscarLibro()
+        +BuscarLibro(titulo)
     }
 
     class Ejemplar {
@@ -106,9 +106,9 @@ classDiagram
     }
 
     class Reserva {
-        - Id (PK)
-        - clienteId (FK)
-        - libroId (FK)
+        - Id_PK
+        - clienteId_FK
+        - libroId_FK
         - fecha
         - EstadoReserva estado
 
@@ -133,7 +133,5 @@ classDiagram
     EstadoUsuario -- Usuario    
     EstadoReserva -- Reserva    
     EstadoEjemplar -- Ejemplar    
-
-
 
 ```
