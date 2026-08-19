@@ -1,6 +1,6 @@
 ## Diagramas de Estados
 
-### Diagrama de estados Cliente (Cuando el inicio es por registro)
+### Diagrama de estados Cliente (Cuando el inicio es por registro) [EST-01]
 ```mermaid
 stateDiagram-v2
 
@@ -22,7 +22,7 @@ stateDiagram-v2
 
 ```
 
-### Diagrama de estados Cliente (Cuando el inicio es por loggeo)
+### Diagrama de estados Cliente (Cuando el inicio es por loggeo) [EST-01]
 ```mermaid
 stateDiagram-v2
 
@@ -43,7 +43,7 @@ stateDiagram-v2
 
 ```
 
-### Diagrama de estados Ticket
+### Diagrama de estados Ticket [EST-02]
 ```mermaid
 stateDiagram-v2
 
